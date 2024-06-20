@@ -1,5 +1,6 @@
 import { Container, Text, VStack, Box, Heading, SimpleGrid, Card, CardHeader, CardBody, CardFooter, Button } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const Index = () => {
@@ -27,7 +28,9 @@ const Index = () => {
                 <Text>{job.description}</Text>
               </CardBody>
               <CardFooter>
-                <Button colorScheme="teal">Apply Now</Button>
+                <Link to={`/apply-job/${job.id}`}>
+                  <Button colorScheme="teal">Apply Now</Button>
+                </Link>
               </CardFooter>
             </Card>
           ))}
