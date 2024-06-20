@@ -10,7 +10,6 @@ const Index = () => {
     setJobListings(storedJobListings);
   }, []);
 
-
   return (
     <Container maxW="container.xl" py={10}>
       <VStack spacing={8}>
@@ -27,7 +26,9 @@ const Index = () => {
                 <Text>{job.description}</Text>
               </CardBody>
               <CardFooter>
-                <Button colorScheme="teal">Apply Now</Button>
+                <Link to={`/apply-job/${job.id}`}>
+                  <Button colorScheme="teal">Apply Now</Button>
+                </Link>
               </CardFooter>
             </Card>
           ))}
