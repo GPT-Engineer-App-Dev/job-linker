@@ -1,6 +1,5 @@
 import { Container, Text, VStack, Box, Heading, SimpleGrid, Card, CardHeader, CardBody, CardFooter, Button } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const Index = () => {
@@ -10,7 +9,6 @@ const Index = () => {
     const storedJobListings = JSON.parse(localStorage.getItem("jobListings")) || [];
     setJobListings(storedJobListings);
   }, []);
-
 
   return (
     <Container maxW="container.xl" py={10}>
